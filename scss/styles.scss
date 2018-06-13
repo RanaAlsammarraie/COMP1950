@@ -1,0 +1,324 @@
+
+// site colours
+$header-background-color: gainsboro;
+$li-font-color:black;
+$menu-bar-color:black;
+$a-active-color: #08298A;
+$a-border-color: #3C4562;
+$section-background-color:whitesmoke;
+$footer-font-color:white;
+$footer-background-color: #3C4562;
+$footer-margin:4%;
+$phone-breakpoint:800px;
+
+$li-reponsive-margin:30px;
+$button-menu-measurements:40px;
+body{
+    margin:0;
+    margin:auto;
+}
+h1{
+    margin-top:23px;
+    margin-left:20px;
+}
+header{
+    display:flex;
+     justify-content:space-between; 
+    width: 100%;
+    height:auto;
+    background-color:$header-background-color;
+    line-height: 1.8;
+
+}
+// nav style
+nav{
+    margin-left: 30%;
+    margin-right: 0;
+    width: 60%;
+    font-size: 2.5vh;
+    flex: 2;
+    a{
+        display:block;
+        text-decoration: none;
+        line-height: 42px;
+    }
+    ul{
+        display: flex;
+        list-style-type: none;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        padding-left: 0px;
+    }
+    li a{
+        color:$li-font-color;
+        
+    } 
+    li{
+         width:calc(100% / 4);  
+         color:$li-font-color;
+         text-align: center;
+         margin: 0px auto; 
+         margin-left: $li-reponsive-margin;
+         margin-right: $li-reponsive-margin;
+         border-radius:5px;
+    }
+
+     a:focus,
+     a:hover,
+     a:active {
+     background-color:rgba(244,250,127,0.55);
+    color:$a-active-color;
+    border:solid $a-border-color;
+    outline: none;
+    }
+
+    @media screen and (max-width: $phone-breakpoint){
+            height: 0;
+            overflow: hidden;
+            width: calc(100% + 60px);
+            transition: height .5s ease-in-out;
+            margin-left:5px;
+        
+        
+        
+         ul {
+            flex-direction: column;
+        }
+        
+         li {
+            width: 70%;   
+        }
+        
+         a {
+            border-right: none;
+            line-height: 40px;
+        }
+        
+         a:hover,
+         a:active,
+         a:focus {
+            background-color:rgba(244,250,127,0.55);
+            
+        }
+    }
+}
+//  responsive nav style
+button.menu {
+    display: none;
+    @media screen and (max-width: $phone-breakpoint){
+        
+            display: block;
+            width: $button-menu-measurements;
+            height:$button-menu-measurements;
+            background-color: transparent;
+            border: none;
+            padding-left:0;
+            margin-top: 10px;
+        
+        
+        .button-content {
+            display: block;
+            height: 24px;
+            cursor: pointer;
+        }
+        
+        .text {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+        
+         .bar {
+            display: block;
+            height: 4px;
+            background-color:$menu-bar-color;
+            width: 100%;
+            position: relative;
+            top: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .bar:before {
+            content: "";
+            width: 100%;
+            height: 4px;
+            top: 10px;
+            left: 0;
+            background-color:$menu-bar-color;
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .bar:after {
+            content: "";
+            width: 100%;
+            height: 4px;
+            top: -10px;
+            left: 0;
+            background-color: $menu-bar-color;
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        :focus{
+            outline: none;
+        }
+       
+     }
+}
+
+@media screen and (max-width: $phone-breakpoint){
+    .button-content:focus {
+        outline: none;
+    }
+    
+
+    .show button.menu .bar {
+		background-color: transparent;	
+	}
+	
+	.show button.menu .bar:before {
+		top: 0;
+		transform: rotate(45deg);	
+	}
+	
+	.show button.menu .bar:after {
+		top: 0;
+		transform: rotate(-45deg);	
+    }
+    .show nav{
+            height: auto; 
+           
+    }
+     footer{
+         text-align: center;
+     }
+}
+
+
+main{
+    margin-top:0px;
+    line-height: 1.4;
+    margin-bottom: 0;
+    min-height:calc(100vh - 70px);
+    
+}
+section{
+    margin:4%;
+    padding: 1.5rem;
+    background-color:$section-background-color;
+    border-radius: 20px;
+    max-width:90%;
+    
+}
+h2{
+    margin:0px;
+}
+
+
+footer{
+     background-color:$footer-background-color;
+    color:$footer-font-color;
+     padding:10px;
+    height:50%;
+}
+.bottom{
+    margin-bottom:0%;
+    margin-top:$footer-margin;
+    margin-right: $footer-margin;
+    margin-left: $footer-margin;
+}
+ 
+
+header img{
+    margin:0;
+    height:50%;
+    
+}
+
+.slider{
+    position:relative;
+    max-width: 90%;
+    margin:auto;
+    border-radius: 20px;
+    
+}
+ div{
+    height:52vh;
+}
+.imgstyle{
+    width:100%;
+    height:52vh;
+}
+.layer1,.layer2,.layer3{
+    position: absolute;
+        width: 100%;
+        height:100%;
+        top: 0;
+        left:0;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+.layer1{
+    background-image: url(../images/html-code1.jpg);
+}
+.layer2{
+    background-image: url(../images/responsive-web-design1.jpg);
+    animation:layer2Anim 10s infinite;
+}
+.layer3{
+    background-image: url(../images/branding1.jpg);
+    animation:layer3Anim 10s infinite;
+}
+
+@keyframes layer2Anim{
+    0%{
+        opacity:0;
+    }
+    17%{
+        opacity:0;
+    }
+    33%{
+        opacity:1;
+    }
+    50%{
+        opacity:1;
+    }
+    67%{
+        opacity:0;
+    }
+   
+    100%{
+        opacity:0;
+    }
+
+}
+
+@keyframes layer3Anim{
+0%{
+opacity:0;
+}
+
+33%{
+opacity:0;
+}
+50%{
+opacity:0;
+}
+67%{
+opacity:1;
+}
+83%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+}
+
+}
