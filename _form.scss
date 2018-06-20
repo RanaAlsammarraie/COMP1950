@@ -1,0 +1,61 @@
+//form styles
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form-01 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    height: 100vh;
+
+}
+.form-01{
+    display: grid;
+    grid-template-columns: 1fr (2, minmax(auto, 540px)) 1fr; 
+    padding: 40px;
+    grid-gap: 30px;
+    justify-content: center;
+    grid-template-areas: 
+        "two two one one";
+}
+.box-add {grid-area: one;}
+.box-form {grid-area: two;}
+
+@media only screen and (max-width: 580px) and (min-width: 320px){
+.form-01{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    height: 200vh;
+    margin-top: -360px;
+}
+.box-add{
+    padding-bottom: 50px;
+}
+.box-form{
+    padding-top: 120px;
+}
+}

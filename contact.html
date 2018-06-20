@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>final Project COMP 1950</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+   
+        <img src="images/logo.png" alt="bcit logo"/>
+        <h1>Contact Us</h1>
+       
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#0">About</a></li>
+                <li><a href="#0">Schedule</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="menu" id="menu">
+                <span class="button-content" tabindex="-1">
+                    <span class="text">Menu</span>
+                    <span class="bar"></span>
+                </span><!-- end button-content -->
+            </button>
+    </header>
+    <main>
+        <section class="bottom">
+        <div class="slider">
+            <img  class="imgstyle" src="images/contact.jpg" alt="contact">       
+        </div> 
+        <div class="form-01">
+            <div class="box-add">
+                <h3>Instructors:</h3>
+                <p>Jeff Parker<br>
+                   <a href="mailto: jeffrey_parker@bcit.ca">jeffrey_parker@bcit.ca</a></p>
+                <p>Michael Whyte<br>
+                    <a href="mailto: michael_whyte@bcit.ca">michael_whyte@bcit.ca</a></p>
+
+                <h3>Connect with us:</h3>
+                <p>For support or any questions<br>
+                   Email us at <a href="mailto: info@bcit.ca">info@bcit.ca</a></p>
+
+                <h3>BCIT Burnaby Campus:</h3>
+                <p>3700 Willingdon Ave<br>
+                    Burnaby, BC V5G 3H2<br>
+                   (604) 434-5734</p>
+
+                <h3>BCIT Downtown Campus:</h3>
+                <p>555 Seymour Street<br>
+                   Vancouver, BC V6B 3H6<br>
+                   (604) 434-5734</p>
+            </div>
+            <div class="box-form">
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+              <label for="lname">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email">
+          
+              <label for="lname">BCIT Student Number</label>
+              <input type="text" id="studentid" name="studentid" placeholder="Your student number">
+              
+              <input type="radio" name="type" value="prospective">Prospective Student<br>
+              <input type="radio" name="type" value="current">Current Student<br>
+              <input type="radio" name="type" value="other">Other<br><br>
+
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer>
+            <p>BCIT COMP 1950</p>
+            <p> Final Project</p>
+
+        </footer>
+        <script src="scripts/script-menu-dropdown.js"></script>
+</body>
+</html>
